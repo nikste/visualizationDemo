@@ -1,0 +1,81 @@
+{
+  "paragraphs": [
+    {
+      "text": "%flinkStreaming\nval text \u003d env.fromElements(\"To be or not to be\")\nval counts \u003d text.flatMap { _.toLowerCase.split(\"\\\\\\\\W+\") filter { _.nonEmpty } }.map { (_, 1) }.keyBy(0).sum(1)\ncounts.print\n\n\nimport org.apache.flink.contrib.streaming.scala.DataStreamUtils._\n\nvar collected \u003d collect[(String,Int)](counts)",
+      "dateUpdated": "Nov 17, 2015 4:46:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1447764366498_-223114068",
+      "id": "20151117-044606_1881990935",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "text: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@35c1f1dc\ncounts: org.apache.flink.streaming.api.scala.DataStream[(String, Int)] \u003d org.apache.flink.streaming.api.scala.DataStream@6051448e\nres0: org.apache.flink.streaming.api.datastream.DataStreamSink[(String, Int)] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@1f598c57\nimport org.apache.flink.contrib.streaming.scala.DataStreamUtils._\ncollected: java.util.Iterator[(String, Int)] \u003d org.apache.flink.contrib.streaming.java.DataStreamIterator@2113bfac\nsending:file:/tmp/scala_shell_tmp-2690e0d4edc4215331da2667d7eb780f/scala_shell_commands.jar\n"
+      },
+      "dateCreated": "Nov 17, 2015 4:46:06 AM",
+      "dateStarted": "Nov 17, 2015 4:46:57 AM",
+      "dateFinished": "Nov 17, 2015 4:47:08 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%flinkStreaming\nif(collected.hasNext()){\n    var el \u003d collected.next();\n    println(\"next element:\" + el) \n}",
+      "dateUpdated": "Nov 17, 2015 4:47:16 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1447764417297_-902904078",
+      "id": "20151117-044657_223225283",
+      "dateCreated": "Nov 17, 2015 4:46:57 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1447764436944_-1172030738",
+      "id": "20151117-044716_464771867",
+      "dateCreated": "Nov 17, 2015 4:47:16 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "streamingExample",
+  "id": "2B4QBZ5PH",
+  "angularObjects": {
+    "2B6RWMPBH": []
+  },
+  "config": {},
+  "info": {}
+}

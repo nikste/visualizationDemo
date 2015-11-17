@@ -1,0 +1,145 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Nov 17, 2015 4:41:19 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  org.apache.zeppelin.rest
+Nov 17, 2015 4:41:19 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class org.apache.zeppelin.rest.ZeppelinRestApi
+  class org.apache.zeppelin.rest.InterpreterRestApi
+  class org.apache.zeppelin.rest.NotebookRestApi
+Nov 17, 2015 4:41:19 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Nov 17, 2015 4:41:19 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.13 06/29/2012 05:14 PM'
+Nov 17, 2015 4:41:20 AM com.sun.jersey.spi.inject.Errors processErrorMessages
+WARNING: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.NotebookRestApi.createNote(java.lang.String) throws java.io.IOException, with URI template, "/", is treated as a resource method
+  WARNING: A sub-resource method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.NotebookRestApi.getNotebookList() throws java.io.IOException, with URI template, "/", is treated as a resource method
+  WARNING: A HTTP GET method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.InterpreterRestApi.listInterpreter(java.lang.String), should not consume any entity.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/interpreter/flink/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Exception in thread "Thread-13" java.lang.IllegalAccessError: tried to access field org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.jarFiles from class org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment
+	at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.prepareJars(ScalaShellRemoteStreamEnvironment.java:103)
+	at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.execute(ScalaShellRemoteStreamEnvironment.java:69)
+	at org.apache.flink.contrib.streaming.java.DataStreamUtils$CallExecute.run(DataStreamUtils.java:81)
+Exception in thread "Thread-141" Exception in thread "Thread-142" java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Nov 17, 2015 4:45:54 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  org.apache.zeppelin.rest
+Nov 17, 2015 4:45:54 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class org.apache.zeppelin.rest.ZeppelinRestApi
+  class org.apache.zeppelin.rest.NotebookRestApi
+  class org.apache.zeppelin.rest.InterpreterRestApi
+Nov 17, 2015 4:45:54 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Nov 17, 2015 4:45:54 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.13 06/29/2012 05:14 PM'
+Nov 17, 2015 4:45:55 AM com.sun.jersey.spi.inject.Errors processErrorMessages
+WARNING: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.NotebookRestApi.createNote(java.lang.String) throws java.io.IOException, with URI template, "/", is treated as a resource method
+  WARNING: A sub-resource method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.NotebookRestApi.getNotebookList() throws java.io.IOException, with URI template, "/", is treated as a resource method
+  WARNING: A HTTP GET method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.InterpreterRestApi.listInterpreter(java.lang.String), should not consume any entity.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/interpreter/flink/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Exception in thread "Thread-13" java.lang.IllegalAccessError: tried to access field org.apache.flink.streaming.api.environment.RemoteStreamEnvironment.jarFiles from class org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment
+	at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.prepareJars(ScalaShellRemoteStreamEnvironment.java:103)
+	at org.apache.flink.api.java.ScalaShellRemoteStreamEnvironment.execute(ScalaShellRemoteStreamEnvironment.java:69)
+	at org.apache.flink.contrib.streaming.java.DataStreamUtils$CallExecute.run(DataStreamUtils.java:81)
+Exception in thread "Thread-141" Exception in thread "Thread-142" java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Nov 17, 2015 6:02:14 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  org.apache.zeppelin.rest
+Nov 17, 2015 6:02:14 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class org.apache.zeppelin.rest.ZeppelinRestApi
+  class org.apache.zeppelin.rest.NotebookRestApi
+  class org.apache.zeppelin.rest.InterpreterRestApi
+Nov 17, 2015 6:02:14 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Nov 17, 2015 6:02:14 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.13 06/29/2012 05:14 PM'
+Nov 17, 2015 6:02:15 AM com.sun.jersey.spi.inject.Errors processErrorMessages
+WARNING: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.NotebookRestApi.createNote(java.lang.String) throws java.io.IOException, with URI template, "/", is treated as a resource method
+  WARNING: A sub-resource method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.NotebookRestApi.getNotebookList() throws java.io.IOException, with URI template, "/", is treated as a resource method
+  WARNING: A HTTP GET method, public javax.ws.rs.core.Response org.apache.zeppelin.rest.InterpreterRestApi.listInterpreter(java.lang.String), should not consume any entity.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/interpreter/flink/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/interpreter/flink/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-interpreter/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-server/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/nikste/workspace-demo/zeppelin_secondtry/zeppelin-zengine/target/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Exception in thread "Thread-151" Exception in thread "Thread-152" java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+Exception in thread "Thread-153" java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
+Exception in thread "Thread-154" java.lang.NullPointerException
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getScheduler(RemoteInterpreter.java:332)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.getScheduler(LazyOpenInterpreter.java:115)
+	at org.apache.zeppelin.interpreter.Interpreter.destroy(Interpreter.java:124)
+	at org.apache.zeppelin.interpreter.InterpreterGroup$2.run(InterpreterGroup.java:105)
