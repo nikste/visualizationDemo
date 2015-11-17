@@ -1,8 +1,8 @@
 {
   "paragraphs": [
     {
-      "text": "%flinkStreaming\nval text \u003d env.fromElements(\"To be or not to be\")\nval counts \u003d text.flatMap { _.toLowerCase.split(\"\\\\\\\\W+\") filter { _.nonEmpty } }.map { (_, 1) }.keyBy(0).sum(1)\ncounts.print\n\n\nimport org.apache.flink.contrib.streaming.scala.DataStreamUtils._\n\nvar collected \u003d collect[(String,Int)](counts)",
-      "dateUpdated": "Nov 17, 2015 4:46:57 AM",
+      "text": "%flinkStreaming\n//*/5 * * * * ?\n\nval text \u003d env.fromElements(\"To be or not to be\")\nval counts \u003d text.flatMap { _.toLowerCase.split(\"\\\\W+\") filter { _.nonEmpty } }.map { (_, 1) }.keyBy(0).sum(1)\ncounts.print\n\n\nimport org.apache.flink.contrib.streaming.scala.DataStreamUtils._\n\nvar collected \u003d collect[(String,Int)](counts)",
+      "dateUpdated": "Nov 17, 2015 6:46:40 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -25,17 +25,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "text: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@35c1f1dc\ncounts: org.apache.flink.streaming.api.scala.DataStream[(String, Int)] \u003d org.apache.flink.streaming.api.scala.DataStream@6051448e\nres0: org.apache.flink.streaming.api.datastream.DataStreamSink[(String, Int)] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@1f598c57\nimport org.apache.flink.contrib.streaming.scala.DataStreamUtils._\ncollected: java.util.Iterator[(String, Int)] \u003d org.apache.flink.contrib.streaming.java.DataStreamIterator@2113bfac\nsending:file:/tmp/scala_shell_tmp-2690e0d4edc4215331da2667d7eb780f/scala_shell_commands.jar\n"
+        "msg": "text: org.apache.flink.streaming.api.scala.DataStream[String] \u003d org.apache.flink.streaming.api.scala.DataStream@6a607c72\ncounts: org.apache.flink.streaming.api.scala.DataStream[(String, Int)] \u003d org.apache.flink.streaming.api.scala.DataStream@68c05f0f\nres44: org.apache.flink.streaming.api.datastream.DataStreamSink[(String, Int)] \u003d org.apache.flink.streaming.api.datastream.DataStreamSink@3ffd1845\nimport org.apache.flink.contrib.streaming.scala.DataStreamUtils._\ncollected: java.util.Iterator[(String, Int)] \u003d org.apache.flink.contrib.streaming.java.DataStreamIterator@6d20f86e\n"
       },
       "dateCreated": "Nov 17, 2015 4:46:06 AM",
-      "dateStarted": "Nov 17, 2015 4:46:57 AM",
-      "dateFinished": "Nov 17, 2015 4:47:08 AM",
+      "dateStarted": "Nov 17, 2015 6:46:18 AM",
+      "dateFinished": "Nov 17, 2015 6:46:20 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%flinkStreaming\nif(collected.hasNext()){\n    var el \u003d collected.next();\n    println(\"next element:\" + el) \n}",
-      "dateUpdated": "Nov 17, 2015 4:47:16 AM",
+      "text": "\n// register rabbit mq channel\n\n\n",
+      "dateUpdated": "Nov 17, 2015 6:47:30 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -59,14 +59,47 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "%flinkStreaming\nif(collected.hasNext()){\n    var el \u003d collected.next();\n    println(\"next element:\" + el) \n}\n\n// send feedback according to elements received here.\n",
+      "dateUpdated": "Nov 17, 2015 6:47:30 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "tableHide": false
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "jobName": "paragraph_1447764436944_-1172030738",
       "id": "20151117-044716_464771867",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "next element:(or,1)\n"
+      },
       "dateCreated": "Nov 17, 2015 4:47:16 AM",
+      "dateStarted": "Nov 17, 2015 6:46:35 AM",
+      "dateFinished": "Nov 17, 2015 6:46:35 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1447771441445_-193973393",
+      "id": "20151117-064401_386310171",
+      "dateCreated": "Nov 17, 2015 6:44:01 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -76,6 +109,9 @@
   "angularObjects": {
     "2B6RWMPBH": []
   },
-  "config": {},
+  "config": {
+    "looknfeel": "default",
+    "cron": ""
+  },
   "info": {}
 }
